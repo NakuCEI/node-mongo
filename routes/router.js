@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const { getServicios } = require('../controllers/serviciosController');
 
 router.get('/', (req, res) => {
     res.render('index', {
@@ -8,28 +9,6 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/servicios', (req, res) => {
-    res.render('servicios', {
-        titulo: 'Servicios desde views', 
-        descripcion: 'Descripción para servicios', 
-        data: [
-            {
-                "nombre": "Servicio Uno", 
-                "comentario": "Comentario Servicio Uno",
-                "fecha": ''
-            }, 
-            {
-                "nombre": "Servicio Dos", 
-                "comentario": "Comentario Servicio Dos",
-                "fecha": ''
-            }, 
-            {
-                "nombre": "Servicio Tres", 
-                "comentario": "Comentario Servicio Tres",
-                "fecha": ''
-            }
-        ]
-    });
-});
+router.get('/servicios', getServicios);
 
 module.exports = router;
