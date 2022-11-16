@@ -15,15 +15,18 @@ router.get('/servicios', (req, res) => {
         data: [
             {
                 "nombre": "Servicio Uno", 
-                "comentario": "Comentario Servicio Uno"
+                "comentario": "Comentario Servicio Uno",
+                "fecha": ''
             }, 
             {
                 "nombre": "Servicio Dos", 
-                "comentario": "Comentario Servicio Dos"
+                "comentario": "Comentario Servicio Dos",
+                "fecha": ''
             }, 
             {
                 "nombre": "Servicio Tres", 
-                "comentario": "Comentario Servicio Tres"
+                "comentario": "Comentario Servicio Tres",
+                "fecha": ''
             }
         ]
     });
